@@ -1,0 +1,46 @@
+<html>
+
+
+<h1>Draw Art!!!</h1>
+<a href="http://www.skulpt.org">
+Click here when finished</a>
+<body>
+
+<p>Copy the following code, then go to the next page by clicking the <i>click here
+   when finished</i> above, then delete what is in the first box on the page,
+   paste the code into the first box on the
+   the page. After you have pasted the code hit run, then scroll down to the
+   red box and watch the code run.</p>
+<figure>
+ <img src="http://bob-irving.com/wp-content/uploads/2014/11/squarePinwheel.png"
+ alt="photograph" width="400" height="500" align="right" />
+</figure>
+
+<pre>
+import turtle
+
+
+def draw_square(some_turtle):
+    for i in range(1, 5):
+        some_turtle.forward(100)
+        some_turtle.right(90)
+
+
+def draw_art():
+    window = turtle.Screen()
+    window.bgcolor("red")
+    brad = turtle.Turtle()
+    brad.color("yellow")
+    brad.speed(34)
+    for i in range(1, 37):
+        draw_square(brad)
+        brad.right(10)
+
+    window.exitonclick()
+
+
+draw_art()
+</pre>
+</body>
+
+</html>
