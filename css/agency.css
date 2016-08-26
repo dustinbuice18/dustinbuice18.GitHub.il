@@ -744,11 +744,3 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #fed136;
 }
-
-form {background-image: url('http://image.shutterstock.com/z/stock-photo-email-background-sending-and-receiving-email-background-concept-with-flying-mail-raster-version-112814941.jpg');
-      color: yellow;
-      margin: 1%;
-      height: 25em;
-
-}
-p {font-size: "23";}
