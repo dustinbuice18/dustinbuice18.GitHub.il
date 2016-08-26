@@ -585,7 +585,8 @@ section#contact ::-webkit-input-placeholder {
   font-weight: 700;
   color: #eeeeee;
 }
-p {color: red;}
+p {color: white;
+   font-size: 14px}
 section#contact :-moz-placeholder {
   /* Firefox 18- */
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
