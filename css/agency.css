@@ -226,7 +226,7 @@ fieldset[disabled] .btn-xl.active {
   }
 }
 header {
-  background-image: url('../img/header-bg.jpg');
+  background-image: url('http://3.bp.blogspot.com/-BBNWmkgD3-4/UP3UEXNJI2I/AAAAAAAASII/j7H2DYUrd9Y/s1600/DSC00165-004.JPG');
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -744,3 +744,11 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #fed136;
 }
+
+form {background-image: url('http://image.shutterstock.com/z/stock-photo-email-background-sending-and-receiving-email-background-concept-with-flying-mail-raster-version-112814941.jpg');
+      color: yellow;
+      margin: 1%;
+      height: 25em;
+
+}
+p {font-size: "23";}
