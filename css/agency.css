@@ -585,7 +585,7 @@ section#contact ::-webkit-input-placeholder {
   font-weight: 700;
   color: #eeeeee;
 }
-p {color: white;
+p {color: black;
    font-size: 26px}
 section#contact :-moz-placeholder {
   /* Firefox 18- */
