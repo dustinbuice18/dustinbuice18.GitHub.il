@@ -1,0 +1,57 @@
+<html>
+<head>
+  <title>vowel check DB</title>
+</head>
+<body>
+  <pre>
+
+
+def has_all_Vowels(word):
+    '(str) -> bool'
+    return (('A' in word) and ('E' in word) and ('I' in word) and
+            ('O' in word) and ('U' in word))
+
+
+def has_y(word):
+    return ('Y' in word)
+
+
+def has_no_vowels(word):
+    return not (('A' in word) or ('E' in word) or ('I' in word) or
+                ('O' in word) or ('U' in word))
+
+
+def has_vowels_in_order(word):
+    return (word.index('A') < word.index('E') < word.index('I') <
+            word.index('O') < word.index('U'))
+
+
+def has_vowels_once(word):
+    return word.count('A') == word.count('E') == word.count('I') == word.count(
+        'O') == word.count('U') == 1
+
+
+def initials_in_order(word):
+    return ('S' in word and 'T' in word and 'A' in word) and (
+        word.index('S') < word.index('T') < word.index('A'))
+
+
+if __name__ == '__main__':
+    with open('sowpods.txt', 'r') as file:
+        word_bank = file.read().split()
+    all_vowels = list(filter(has_all_Vowels, word_bank))
+    all_vowels_y = list(filter(has_y, all_vowels))
+    no_vowels = list(filter(has_no_vowels, word_bank))
+    vowels_once = list(filter(has_vowels_once, all_vowels))
+    vowels_in_order = list(filter(has_vowels_in_order, all_vowels))
+    in_order = list(filter(initials_in_order, word_bank))
+
+    print('all words:', len(word_bank))
+    print('words with y:', len(all_vowels))
+    print('no vowels:', len(no_vowels))
+    print('vowels in order:', len(all_vowels))
+    print('one vowels words:', len(vowels_in_order))
+    print('vowels in order:', len(in_order))
+  </pre>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<html>
+<head>
+  <title>Gladiator DB</title>
+</head>
+<body>
+  <pre>
+
+
+import random
+
+
+class Gladiator:
+    def __init__(self, health, rage, damage_low, damage_high):
+        """ (Gladiator, number, number, number, number) -> NoneType
+
+         Create a Gladiator class as defined and use the class
+          you just created to make a game where two gladiators
+          fight to the death. Each gladiator is controlled via input.
+
+        >>> python_gladiator = Gladiator(100, 0, 20, 51)
+        >>> python_gladiator.health
+        100
+        >>> python_gladiator.rage
+        0
+        >>> python_gladiator.damage_low
+        20
+        >>> python_gladiator.damage_high
+        51
+        """
+        self.health = health
+        self.rage = rage
+        self.damage_low = damage_low
+        self.damage_high = damage_high
+
+    def attack(self, other):
+        """ (gladiator, gladiator) -> NoneType
+
+        Attacks a target provided which either hits or crits,
+        a hit does a random number inbetween damage_low and
+        damage_high, a crit does double the damage of a hit,
+        the gladiator crits <rage> (%) of the time
+        if he crits, rage is set to 0, otherwise it is increased by 15.
+
+
+        """
+        damage = random.randint(self.damage_low, self.damage_high)
+        if self.rage > random.randint(0, 100):
+            self.rage = 0
+            damage *= 2
+        else:
+            self.rage += 15
+        # reduce their hp
+        other.health -= damage
+
+    def heal(self):
+        """ (number) -> int
+
+        If healing then gladiators health rises by 5 and
+        there rage decreases by 10.
+
+        """
+        if self.rage >= 10:
+            self.health += 5
+            self.rage -= 10
+
+    def dead(self, other):
+        """ (gladiator) -> str
+        If gladiator health reaches 0 then the gladiator is dead.
+
+        """
+        if self.health < 1:
+            return True
+        else:
+            return False
+          </pre>
+        </body>
+        </html>
