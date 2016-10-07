@@ -676,6 +676,7 @@ ul.social-buttons li a:active {
 }
 .portfolio-modal .modal-content p {
   margin-bottom: 30px;
+  color: black;
 }
 .portfolio-modal .modal-content p.item-intro {
   margin: 20px 0 30px;
